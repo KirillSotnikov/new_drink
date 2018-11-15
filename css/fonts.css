@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/AvenirNextCyr-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "AvenirNextCyr-Bold";
+    src: url("../fonts/AvenirNextCyr-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "AvenirNextCyr-Medium";
+    src: url("../fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "AvenirNextCyr-Light";
+    src: url("../fonts/AvenirNextCyr-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
