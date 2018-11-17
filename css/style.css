@@ -31,6 +31,9 @@ p {
   padding: 0 30px;
   box-sizing: border-box;
 }
+.wrapper.mini {
+  max-width: 1060px;
+}
 .wrapper.flex {
   display: flex;
   align-items: center;
@@ -164,7 +167,7 @@ section {
 }
 section.first {
   min-height: 100vh;
-  padding-top: 63px;
+  padding-top: 100px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -299,6 +302,8 @@ section.first .nav_slider_num {
 section.second {
   padding-top: 50px;
   position: relative;
+  padding-bottom: 50px;
+  overflow-x: hidden;
 }
 section.second .line {
   position: absolute;
@@ -323,6 +328,7 @@ section.second .category_title {
   z-index: 2;
   text-align: left;
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
 section.second .category_list {
   display: flex;
@@ -372,11 +378,14 @@ section.second .category_tabs_box {
   z-index: 2;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: all 0.4s ease-out;
+  transform: scale(0.6);
 }
 section.second .category_tabs_box.active {
   position: static;
   opacity: 1;
   visibility: visible;
+  transform: scale(1);
 }
 section.second .category_tabs_title {
   color: #fff;
@@ -413,12 +422,578 @@ section.second .category_tabs_link {
   line-height: 1.2;
   z-index: 2;
 }
+section.third {
+  padding-top: 50px;
+  position: relative;
+  padding-bottom: 50px;
+}
+section.third .line {
+  position: absolute;
+  width: 100%;
+  background-color: #bd0000;
+  height: 11px;
+  top: 73px;
+  right: 60%;
+  z-index: 1;
+}
+section.third .hit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section.third .hit_title {
+  font-size: 46px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+section.third .hit_slider {
+  width: 100%;
+  padding-top: 30px;
+}
+section.third .hit_slider .slider {
+  display: flex;
+  align-items: center;
+}
+section.third .hit_slider .arrow {
+  cursor: pointer;
+  padding: 20px 5px;
+  background: #bd0000;
+}
+section.third .hit_slider_box {
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.third .hit_slider_box_image {
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+section.third .hit_slider_box_title {
+  font-size: 22px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 30px;
+  text-align: center;
+}
+section.third .hit_slider_box_title b {
+  font-family: "AvenirNextCyr-Bold";
+}
+section.third .hit_slider_box_desc {
+  font-size: 16px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  margin-top: 10px;
+  text-align: center;
+}
+section.fourth {
+  padding-top: 50px;
+  position: relative;
+  padding-bottom: 50px;
+}
+section.fourth .line {
+  position: absolute;
+  width: 100%;
+  background-color: #bd0000;
+  height: 11px;
+  top: 73px;
+  right: 35%;
+  z-index: 1;
+}
+section.fourth .reviews {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.fourth .reviews_box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+section.fourth .reviews_box_card {
+  margin-bottom: 20px;
+}
+section.fourth .reviews_box_card_date {
+  font-size: 22.416px;
+  font-family: "AvenirNextCyr-Medium";
+  color: #ffffff;
+  line-height: 1.2;
+  background: #bd0000;
+  padding: 12.5px 30px;
+}
+section.fourth .reviews_box_card_text {
+  font-size: 17px;
+  font-family: "AvenirNextCyr";
+  color: #e6e6e6;
+  line-height: 1.2;
+  padding: 20px 30px;
+  text-align: justify;
+}
+section.fourth .reviews_box_card_name {
+  font-size: 17px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  padding: 0 30px 20px;
+}
+section.fourth .reviews_box_more-btn {
+  font-size: 22.416px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  cursor: pointer;
+  padding: 12.5px 50px;
+  background: #bd0000;
+  align-self: flex-end;
+  transition: all 0.2s ease-out;
+}
+section.fourth .reviews_box_more-btn:hover {
+  transform: scale(1.05);
+}
+section.fourth .reviews_box_more-btn b {
+  font-family: "AvenirNextCyr-Medium";
+}
+section.fourth .reviews_title {
+  font-size: 46px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+section.fourth .reviews_form {
+  width: 35.8%;
+  display: flex;
+  flex-direction: column;
+  padding: 12.5px 30px;
+  box-sizing: border-box;
+}
+section.fourth .reviews_form_title {
+  font-size: 30px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 3;
+}
+section.fourth .reviews_form_title b {
+  font-family: "AvenirNextCyr-Bold";
+}
+section.fourth .reviews_form_box {
+  max-width: 250px;
+  align-self: flex-end;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.fourth .reviews_form_box_input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+section.fourth .reviews_form_box_textarea {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  height: 200px;
+  min-height: 150px;
+  max-width: 100%;
+  min-width: 150px;
+}
+section.fourth .reviews_form_box .wall {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+  background: #bd0000;
+}
+section.fourth .reviews_form_btn {
+  position: relative;
+  z-index: 2;
+  max-width: 250px;
+  width: 100%;
+  align-self: flex-end;
+  border: none;
+  margin: 15px 0;
+  padding: 7.5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: #fff;
+  background: #bd0000;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+section.fourth .reviews_form_btn:hover {
+  transform: scale(1.05);
+}
+section.fives {
+  padding-top: 50px;
+  position: relative;
+  padding-bottom: 50px;
+}
+section.fives .line {
+  position: absolute;
+  width: 100%;
+  background-color: #bd0000;
+  height: 11px;
+  top: 73px;
+  right: 50%;
+  z-index: 1;
+}
+section.fives .mark {
+  padding-bottom: 50px;
+}
+section.fives .mark_title {
+  font-size: 46px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+section.fives .mark_card {
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+section.fives .mark_card_image {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+section.fives .mark .slider {
+  display: flex;
+  align-items: center;
+}
+section.fives .mark .slider .arrow {
+  cursor: pointer;
+  padding: 20px 5px;
+  background: #bd0000;
+}
+section.fives .recall {
+  padding-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.fives .recall_box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+section.fives .recall_box_card {
+  margin-bottom: 20px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+section.fives .recall_box_card .wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 55%;
+  background: #bd0000;
+  z-index: 1;
+}
+section.fives .recall_box_card_date {
+  font-size: 30px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  padding: 0 0 12.5px;
+  position: relative;
+  z-index: 3;
+}
+section.fives .recall_box_card_date b {
+  font-family: "AvenirNextCyr-Bold";
+}
+section.fives .recall_box_card_text {
+  font-size: 17px;
+  font-family: "AvenirNextCyr";
+  color: #e6e6e6;
+  line-height: 1.2;
+  padding: 20px 0;
+  text-align: justify;
+  position: relative;
+  z-index: 3;
+}
+section.fives .recall_box_card_image {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 3;
+}
+section.fives .recall_box_card_link {
+  font-size: 17px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+section.fives .recall_box_more-btn {
+  font-size: 22.416px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  cursor: pointer;
+  padding: 12.5px 50px;
+  background: #bd0000;
+  align-self: flex-end;
+  transition: all 0.2s ease-out;
+}
+section.fives .recall_box_more-btn:hover {
+  transform: scale(1.05);
+}
+section.fives .recall_box_more-btn b {
+  font-family: "AvenirNextCyr-Medium";
+}
+section.fives .recall_title {
+  font-size: 46px;
+  font-family: "AvenirNextCyr-Bold";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+section.fives .recall_form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px 12.5px;
+  box-sizing: border-box;
+}
+section.fives .recall_form_title {
+  font-size: 30px;
+  font-family: "AvenirNextCyr";
+  color: #ffffff;
+  line-height: 1.2;
+  position: relative;
+  z-index: 3;
+}
+section.fives .recall_form_title b {
+  font-family: "AvenirNextCyr-Bold";
+}
+section.fives .recall_form_box {
+  max-width: 250px;
+  align-self: flex-end;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.fives .recall_form_box_input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+section.fives .recall_form_box_textarea {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  height: 200px;
+  min-height: 150px;
+  max-width: 100%;
+  min-width: 150px;
+}
+section.fives .recall_form_box .wall {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+  background: #bd0000;
+}
+section.fives .recall_form_btn {
+  position: relative;
+  z-index: 2;
+  max-width: 250px;
+  width: 100%;
+  align-self: flex-end;
+  border: none;
+  margin: 15px 0;
+  padding: 7.5px 10px;
+  font-size: 20px;
+  font-family: "AvenirNextCyr-Medium";
+  color: #fff;
+  background: #bd0000;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+section.fives .recall_form_btn:hover {
+  transform: scale(1.05);
+}
+footer {
+  position: relative;
+}
+footer .footer {
+  display: flex;
+  align-items: flex-start;
+}
+footer .footer_logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+}
+footer .footer_box {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+footer .footer_box.row {
+  flex-direction: row;
+  align-items: flex-start;
+}
+footer .footer_box_link {
+  margin: 2.5px 0;
+  font-size: 16px;
+  display: inline-block;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 19px;
+  font-family: "AvenirNextCyr-Medium";
+  color: #fff;
+  opacity: 0.75;
+  line-height: 1.2;
+  transition: all 0.2s ease-out;
+}
+footer .footer_box_link.active {
+  font-weight: bold;
+  opacity: 1;
+}
+footer .footer_box_link:hover {
+  opacity: 0.9;
+}
+footer .footer_box_link.black {
+  color: #222;
+}
+footer .footer_box_text {
+  font-size: 16px;
+  display: inline-block;
+  font-family: "AvenirNextCyr";
+  color: #fff;
+  opacity: 0.75;
+  line-height: 1.2;
+}
+footer .footer_box_graphic {
+  width: 35px;
+  margin-right: 10px;
+}
+footer .footer_box_form {
+  border: 2px solid #fff;
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+footer .footer_box_form_icon {
+  width: 20px;
+  margin-right: 5px;
+}
+footer .footer_box_form_input {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  display: inline-block;
+  font-family: "AvenirNextCyr";
+  color: #fff;
+  line-height: 1.2;
+  width: 100%;
+}
+footer .footer_box_icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .footer_box_icons_item {
+  height: 30px;
+  margin: 0 5px;
+}
+footer .footer_box_icons_item img {
+  height: 30px;
+}
 .modal_menu_btn {
   position: fixed;
   display: none;
   top: 30px;
   right: 30px;
   z-index: 9;
+  width: 40px;
   cursor: pointer;
 }
 .modal_menu_box {
@@ -462,13 +1037,6 @@ section.second .category_tabs_link {
   color: #22282d;
   line-height: 1.2;
 }
-.modal_menu_box_link:hover {
-  color: #fff;
-  border-color: #343a3f;
-  background-image: -moz-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
-  background-image: -webkit-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
-  background-image: -ms-linear-gradient(95deg, #343a3f 30%, #4f5357 100%);
-}
 .modal_menu_box_link.active {
   font-weight: bold;
 }
@@ -479,91 +1047,155 @@ section.second .category_tabs_link {
   header {
     width: 200px;
   }
+  section.first .big_slider {
+    width: 60%;
+  }
+  .wrapper.flex {
+    justify-content: center;
+  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   section.first .line {
     display: none;
   }
+  footer .footer_logo {
+    display: none;
+  }
 }
-@media screen and (max-width: 1150px) {
-  section.first .big_slider {
-    width: 600px;
+@media screen and (max-width: 1100px) {
+  section.first .big_slider_title {
+    font-size: 30px;
   }
-  section.first .big_slider_text p {
-    font-size: 25px;
-  }
-  section.first .big_slider_text_btn {
+  section.first .big_slider_desc {
     font-size: 16px;
   }
-}
-@media screen and (max-width: 950px) {
-  section.first .big_slider {
-    width: 500px;
-    padding-left: 200px;
-  }
-  section.first .big_slider_text {
-    width: 320px;
-  }
-  section.first .big_slider_text p {
+  section.first .big_slider_buy_cost {
     font-size: 20px;
   }
-  section.first .big_slider_text_btn {
-    font-size: 14px;
+}
+@media screen and (max-width: 1100px) {
+  section.first .big_slider {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .footer_box {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  footer .footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 900px) {
+  .first .wrapper.flex {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+  }
+  section.first {
+    padding-bottom: 50px;
+  }
+  section.first .big_slider {
+    width: 100%;
   }
 }
 @media screen and (max-width: 850px) {
-  section.first .wrapper.flex {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-top: 30px;
-  }
-  section.first .big_slider {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  section.first .nav_slider {
-    align-self: flex-end;
-  }
   header .header_desc {
     display: none;
   }
 }
-@media screen and (max-width: 700px) {
-  header .container {
-    flex-direction: column-reverse;
+@media screen and (max-width: 780px) {
+  section.first .site_desc {
+    display: none;
   }
-  header .header_desc {
-    margin-left: 0;
-    margin-bottom: 20px;
+  .first .wrapper.flex {
+    padding: 0 30px;
+  }
+  section.fourth .reviews_title {
+    font-size: 30px;
+  }
+  section.third .hit_title {
+    font-size: 30px;
+  }
+  section.fives .mark_title {
+    font-size: 30px;
+  }
+  section.second .category_title {
+    font-size: 30px;
+  }
+  section.fives .recall_form {
+    width: 50%;
+  }
+  section.fourth .reviews_form {
+    width: 50%;
+  }
+  section.second .category_tabs_title {
+    font-size: 30px;
+  }
+  section.second .category_list_item {
+    font-size: 20px;
+  }
+  footer .footer_box {
+    width: 50%;
   }
 }
-@media screen and (max-width: 650px) {
-  section.first .circle {
-    top: 100px;
+@media screen and (max-width: 700px) {
+  section.second .category_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
   }
-  section.first .big_slider {
-    padding-left: 100px;
-    width: 400px;
-    padding-top: 150px;
+  section.second .category_list_item {
+    margin: 10px 10px;
+    text-align: center;
   }
-  section.first .big_slider_text {
-    top: 0;
+  section.second .category_tabs {
+    width: 100%;
   }
-  section.first .wrapper.flex {
-    padding-top: 150px;
+  section.second .category {
+    flex-direction: column;
+    align-items: center;
   }
-  section.first .nav_slider {
+  section.second .category_tabs_image {
+    max-width: 400px;
+    /* align-self: flex-end; */
     align-self: center;
-    margin-bottom: 30px;
+  }
+  section.fourth .reviews {
+    flex-wrap: wrap;
+  }
+  section.fourth .reviews_box {
+    width: 100%;
+  }
+  section.fourth .reviews_form {
+    width: 100%;
+    margin-top: 50px;
+  }
+  section.fives .recall {
+    flex-wrap: wrap;
+  }
+  section.fives .recall_box {
+    width: 100%;
+  }
+  section.fives .recall_form {
+    width: 100%;
+    margin-top: 50px;
+  }
+  section.fives .recall_box_card_image {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 600px) {
   .modal_menu_btn {
     display: block;
-  }
-  section.first .big_slider_text {
-    left: 50%;
-    transform: translateX(-50%);
   }
   .menu {
     display: none;
@@ -572,46 +1204,96 @@ section.second .category_tabs_link {
     padding-right: 0;
   }
 }
-@media screen and (max-width: 500px) {
-  section.first .big_slider {
-    padding-left: 50px;
+@media screen and (max-width: 550px) {
+  .line {
+    display: none;
   }
-  section.first .big_slider {
-    padding-top: 170px;
-    width: 350px;
+  section.fourth .reviews_title {
+    text-align: center;
+  }
+  footer .footer_box {
+    width: 100%;
+  }
+  footer .footer_box_form {
+    max-width: 300px;
+  }
+  footer .footer_box_icons {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 500px) {
+  section.first .big_slider .slide {
+    flex-direction: column-reverse;
+  }
+  section.first .big_slider_half.w55 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  section.first .big_slider_title {
+    text-align: center;
+  }
+  section.first {
+    padding-top: 200px;
+  }
+  section.first .big_slider_half.w45 {
+    width: 60%;
   }
 }
 @media screen and (max-width: 450px) {
-  section.first .big_slider_text {
-    transform: none;
-    left: 10%;
-    max-width: 260px;
+  section.fives .recall_form_title {
+    text-align: center;
   }
-  section.first .site_desc {
+  section.fourth .reviews_form_title {
+    text-align: center;
+  }
+  section.fives .recall_box_card .wall {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  section.fourth .reviews_form_box .wall {
+    top: -70px;
+  }
+  section.third .hit_slider .arrow {
+    padding: 0;
+    background: transparent;
+  }
+  section.third .hit_slider_box_title {
+    font-size: 18px;
+  }
+  section.fives .recall_form {
+    padding: 0;
+  }
+  section.fourth .reviews_form {
+    padding: 0;
+  }
+  section.fourth .reviews_box_more-btn {
+    text-align: center;
+  }
+  section.third .hit_slider_box_desc {
+    font-size: 14px;
+  }
+  section.first .big_slider_half.w45 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  section.fives .recall_box_card .wall {
     display: none;
   }
-  header {
-    left: 20px;
+  section.fives .recall_box_card {
+    padding: 40px 0;
   }
-  header .logo_image {
-    width: 200px;
+  section.fourth .reviews_title {
+    font-size: 24px;
   }
-}
-@media screen and (max-width: 385px) {
-  section.first .big_slider {
-    padding-left: 20px;
-    padding-right: 30px;
-    width: 300px;
+  section.second .category_title {
+    font-size: 24px;
   }
-  section.first .big_slider_text {
-    left: 10%;
+  section.third .hit_title {
+    font-size: 24px;
   }
-}
-@media screen and (max-width: 340px) {
-  section.first .big_slider_text p {
-    font-size: 16px;
-  }
-  section.first .big_slider_text {
-    left: 20%;
+  section.fives .mark_title {
+    font-size: 24px;
   }
 }

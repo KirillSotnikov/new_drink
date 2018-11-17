@@ -47,6 +47,64 @@ $('.nav_slider .slider').slick({
 
 });
 // ----------------------------------------
+$('.hit_slider .slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,  
+    // fade: true,
+    // arrows: false,  
+    // vertical: true,
+    // verticalSwiping: true,
+    prevArrow: '<div class="arrow left"><img src="img/left_arrow.png"></div>',
+    nextArrow: '<div class="arrow right"><img src="img/right_arrow.png"></div>',
+    responsive: [
+        {
+          breakpoint: 781,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+            breakpoint: 551,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+      ],
+});
+// ----------------------------------------
+$('.mark .slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,  
+    // fade: true,
+    // arrows: false,  
+    // vertical: true,
+    // verticalSwiping: true,
+    prevArrow: '<div class="arrow left"><img src="img/left_arrow.png"></div>',
+    nextArrow: '<div class="arrow right"><img src="img/right_arrow.png"></div>',
+    responsive: [
+      {
+        breakpoint: 781,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+          breakpoint: 551,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+    ],
+});
+// ----------------------------------------
 $('.link').on('click', function(event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
@@ -63,3 +121,12 @@ $('[data-tab]').click(function(){
     $('.category_tabs_box').removeClass('active');
     $('.category_tabs_box' + target).addClass('active');
 });
+// -------------------------------------
+
+function slowScroll (id) {
+    var offset = 0;
+    $('html, body').animate ({
+        scrollTop: $(id).offset ().top - offset
+    }, 800);
+    return false;
+};
