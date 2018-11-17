@@ -77,20 +77,23 @@ header .container {
 header .logo_image {
   max-width: 200px;
 }
-header .menu_box {
+.menu_box {
   justify-self: flex-end;
-  transform: translateY(-100%);
-  transition: all 0.4s ease-out;
+  transition: all 0.6s ease-out;
   opacity: 0;
   visibility: hidden;
   padding-top: 25px;
+  position: fixed;
+  top: -200px;
+  right: 80px;
+  z-index: 99999;
 }
-header .menu_box.active {
-  transform: none;
+.menu_box.active {
   opacity: 1;
   visibility: visible;
+  top: 0;
 }
-header .menu_box_link {
+.menu_box_link {
   margin: 0 5px;
   font-size: 18px;
   padding: 5px 15px;
@@ -105,14 +108,14 @@ header .menu_box_link {
   line-height: 1.2;
   transition: all 0.2s ease-out;
 }
-header .menu_box_link.active {
+.menu_box_link.active {
   font-weight: bold;
   opacity: 1;
 }
-header .menu_box_link:hover {
+.menu_box_link:hover {
   opacity: 0.9;
 }
-header .menu_box_link.black {
+.menu_box_link.black {
   color: #222;
 }
 .menu {

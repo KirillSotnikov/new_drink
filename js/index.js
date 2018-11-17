@@ -7,7 +7,7 @@ if (windowWidth <= 1265) {
     })
 } else {
     $('.menu_btn').click(function(){
-        $('header .menu_box').toggleClass('active');
+        $('.menu_box').toggleClass('active');
     });
 }
 // --------------------------------------------
