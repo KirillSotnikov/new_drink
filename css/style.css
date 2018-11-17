@@ -1,3 +1,6 @@
+* {
+  outline: none;
+}
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -634,6 +637,7 @@ section.fourth .reviews_form_box_textarea {
   min-height: 150px;
   max-width: 100%;
   min-width: 150px;
+  resize: vertical;
 }
 section.fourth .reviews_form_box .wall {
   position: absolute;
@@ -865,6 +869,7 @@ section.fives .recall_form_box_textarea {
   min-height: 150px;
   max-width: 100%;
   min-width: 150px;
+  resize: vertical;
 }
 section.fives .recall_form_box .wall {
   position: absolute;
