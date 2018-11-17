@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -36,7 +37,9 @@ p {
   list-style: none;
   text-decoration: none;
 }
-
+.first, .second, .third, .fourth, .fives, footer{
+    padding-right: 80px;
+}
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
@@ -122,7 +125,7 @@ header{
     }
 }
 .menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -389,6 +392,7 @@ section.second{
             width: 50%;
             position: relative;
             z-index: 2;
+            min-height: 640px;
             .square{
                 position: absolute;
                 top: 0;
@@ -1161,8 +1165,6 @@ footer{
     section.first .big_slider {
       width: 45%;
     }
-  }
-  @media screen and (max-width:1000px){
     footer .footer_box{
         width: 30%;
         margin-bottom: 30px;
@@ -1185,6 +1187,12 @@ footer{
     }
     section.first .big_slider {
       width: 100%;
+    }
+    section.fives .recall_form{
+      width: 50%;
+    }
+    section.fourth .reviews_form{
+      width: 50%;
     }
   }
   @media screen and (max-width: 850px) {
@@ -1210,12 +1218,6 @@ footer{
     }
     section.second .category_title{
       font-size: 30px;
-    }
-    section.fives .recall_form{
-      width: 50%;
-    }
-    section.fourth .reviews_form{
-      width: 50%;
     }
     section.second .category_tabs_title{
       font-size: 30px;
