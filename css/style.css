@@ -924,7 +924,7 @@ footer .footer_logo {
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 200px;
+  max-width: 150px;
 }
 footer .footer_box {
   display: flex;
