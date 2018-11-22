@@ -915,6 +915,7 @@ section.fives .recall_form_btn:hover {
 }
 footer {
   position: relative;
+  padding-bottom: 30px;
 }
 footer .footer {
   display: flex;
@@ -925,6 +926,7 @@ footer .footer_logo {
   top: 0;
   left: 0;
   max-width: 150px;
+  display: none;
 }
 footer .footer_box {
   display: flex;
@@ -992,6 +994,15 @@ footer .footer_box_form_input {
   color: #fff;
   line-height: 1.2;
   width: 100%;
+}
+footer .footer_box_mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer_box_mail_img {
+  height: 16px;
+  margin-right: 5px;
 }
 footer .footer_box_icons {
   margin-top: 20px;

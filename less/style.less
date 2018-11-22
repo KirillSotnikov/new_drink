@@ -964,6 +964,7 @@ section.fives{
 }
 footer{
     position: relative;
+    padding-bottom: 30px;
     .footer{
         display: flex;
         align-items: flex-start;
@@ -972,6 +973,7 @@ footer{
             top: 0;
             left: 0;
             max-width: 150px;
+            display: none;
         }
         &_box{
             display: flex;
@@ -1041,6 +1043,15 @@ footer{
                     // opacity: 0.75;
                     line-height: 1.2;
                     width: 100%;
+                }
+            }
+            &_mail{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                &_img{
+                    height: 16px;
+                    margin-right: 5px;
                 }
             }
             &_icons{
